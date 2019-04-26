@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLoansTable extends Migration
+class CreateBookHoldsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,16 @@ class CreateLoansTable extends Migration
      */
     public function up()
     {
-        Schema::create('loans', function (Blueprint $table) {
+        Schema::create('book_holds', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('user_id')->unsigned();
-            $table->bigInteger('book_copy_id')->unsigned();
-            $table->integer('renewal_count')->default(0);
-            $table->timestamp('returned_at')->nullable();
-            $table->timestamp('due_date')->nullable();
+            $table->bigInteger('book_id')->unsigned();
+            $table->bigInteger('book_status_id')->unsigned();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('book_copy_id')->references('id')->on('book_copies');
+            $table->foreign('book_id')->references('id')->on('books');
+            $table->foreign('book_status_id')->references('id')->on('book_statuses');
         });
     }
 
@@ -34,6 +33,6 @@ class CreateLoansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('loans');
+        Schema::dropIfExists('book_holds');
     }
 }

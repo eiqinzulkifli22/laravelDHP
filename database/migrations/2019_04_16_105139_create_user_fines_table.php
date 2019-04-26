@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBookStatusesTable extends Migration
+class CreateUserFinesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateBookStatusesTable extends Migration
      */
     public function up()
     {
-        Schema::create('book_statuses', function (Blueprint $table) {
+        Schema::create('user_fines', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('desc');
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ class CreateBookStatusesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('book_statuses');
+        Schema::dropIfExists('user_fines');
     }
 }

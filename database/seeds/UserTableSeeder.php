@@ -14,12 +14,14 @@ class UserTableSeeder extends Seeder
     {
         User::create([
             'name' => 'Nurul Ainna Syuhada Binti Norazmi',
-            'email' => 'nainnasyuhada@hotmail.com',
+            'email' => 'nainnasyuhada@gmail.com',
             'password' => Hash::make('520592'),
-            'phone_no' => '173043301',
+            'phone_no' => '60173043301',
             'matric_no' => '1520592',
             'barcode_no' => 'B1000895113',
             'centre' => 'Kuliyyah of Information and Communication Technology'
         ]);
+
+        
     }
 }

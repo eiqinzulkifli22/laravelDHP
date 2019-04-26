@@ -15,5 +15,9 @@ class BookStatusTableSeeder extends Seeder
         BookStatus::create(['desc' => 'Available']);
         BookStatus::create(['desc' => 'On Loan']);
         BookStatus::create(['desc' => 'Unavailable']);
+        BookStatus::create(['desc' => 'Requested for hold']);
+        BookStatus::create(['desc' => 'Ready to pick up']);
+        BookStatus::create(['desc' => 'Released']);
+        BookStatus::create(['desc' => 'Picked up']);
     }
 }

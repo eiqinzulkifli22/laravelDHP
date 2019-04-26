@@ -1,3 +1,5 @@
+/
+
 <?php
 
 use App\Book;
@@ -7,65 +9,70 @@ class BookTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
+     * isi permanent data then dia push masuk dalam database
      *
      * @return void
      */
     public function run()
     {
         Book::create([
-            'copy_no' => '11100333880',
             'title' => 'HTML & CSS : design and build websites',
             'author' => 'Duckett, Jon',
+            'publication_year' => 2011,
+            'publisher'=> 'Wiley,',
+            'edition' => 'N/A',
             'isbn' => '9781118008188',
             'call_no' => 'QA76.76 H94 D835H 2011',
-            'publication_year' => 2011,
-            'book_category' => 'General',
-            'book_level' => 'Level 4',
-            'book_shelf' => 'Shelf 52',
+            'book_category_id' => 1,
             'library_location' => 'Central Library, Gombak',
-            'desc' => 'Available',
+            'book_level' => '4',
+            'book_shelf' => '52',
         ]);
 
         Book::create([
-            'copy_no' => '00011304878',
             'title' => 'Systems Analysis and Design',
             'author' => 'Kendall, Kenneth E.',
+            'publication_year' => 2014,
+            'publisher'=> 'Pearson Education Limited',
+            'edition' => '9',
             'isbn' => '9780273787105',
             'call_no' => 'QA76.9 S88 K33S 2014',
-            'publication_year' => 2014,
-            'book_category' => 'Red Spot/Reserves',
-            'book_level' => 'Level 4',
-            'book_shelf' => 'Shelf 49',
+            'book_category_id' => 2,
             'library_location' => 'Central Library, Gombak',
-            'desc' => 'On Loan',
+            'book_level' => '4',
+            'book_shelf' => '49',
         ]);
 
         Book::create([
-            'copy_no' => '11100341623',
-            'title' => 'Systems Analysis and Design',
-            'author' => 'Kendall, Kenneth E.',
-            'isbn' => '9780273787105',
-            'call_no' => 'QA76.9 S88 K33S 2014',
-            'publication_year' => 2014,
-            'book_category' => 'General',
-            'book_level' => 'Level 4',
-            'book_shelf' => 'Shelf 49',
+            'title' => 'The Capacitor',
+            'author' => 'Paeg, H.',
+            'publication_year' => 1990,
+            'publisher'=> 'Siemens Aktienges, Munich',
+            'edition' => 'N/A',
+            'isbn' => '3800915715',
+            'call_no' => 'TK 7872 C65 P126K4 1990',
+            'book_category_id' => 1,
             'library_location' => 'Central Library, Gombak',
-            'desc' => 'On Loan',
+            'book_level' => '4',
+            'book_shelf' => '26',
         ]);
 
         Book::create([
-            'copy_no' => '11100341624',
-            'title' => 'Systems Analysis and Design',
-            'author' => 'Kendall, Kenneth E.',
-            'isbn' => '9780273787105',
-            'call_no' => 'QA76.9 S88 K33S 2014',
-            'publication_year' => 2014,
-            'book_category' => 'General',
-            'book_level' => 'Level 4',
-            'book_shelf' => 'Shelf 49',
+            // 'cover_page_url' => asset('9780521695244.jpg'),
+          
+            'title' => 'Quantum Groups A Path to Current Algebra',
+            'author' => 'Street, R.',
+            'publication_year' => 2007,
+            'publisher'=> 'Cambridge Uniersity Press',
+            'edition' => 'N/A',
+            'isbn' => '9780521695244',
+            'call_no' => 'QC 20.7 G76 S915Q 2007',
+            'book_category_id' => 1,
             'library_location' => 'Central Library, Gombak',
-            'desc' => 'Unvailable',
+            'book_level' => '4',
+            'book_shelf' => '49',
         ]);
     }
 }
+// C:\xampp\htdocs\LaravelDarulHikmahPocket\database\seeds\BookTableSeeder.php
+// database\seeds\BookTableSeeder.php

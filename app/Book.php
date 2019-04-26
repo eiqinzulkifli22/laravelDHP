@@ -6,13 +6,22 @@ use Illuminate\Database\Eloquent\Model;
 
 class Book extends Model
 {
-    public function status()
+    protected $guarded = ['id'];
+
+    public function category()
     {
-        return $this->belongsTo(BookStatus::class, 'book_status_id');
+        return $this->belongsTo(BookCategory::class, 'book_category_id');
     }
 
-    public function loans()
+    public function copies()
     {
-        return $this->hasMany(Loan::class);
+        return $this->hasMany(BookCopy::class);
     }
+
+    public function reserve()
+    {
+        return $this->hasMany(BookHold::class);
+    }
+
+    
 }

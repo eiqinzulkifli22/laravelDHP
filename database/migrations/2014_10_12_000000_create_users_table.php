@@ -8,6 +8,7 @@ class CreateUsersTable extends Migration
 {
     /**
      * Run the migrations.
+     * buat table dalam ni then dia create table sendiri dalam database
      *
      * @return void
      */
@@ -23,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('centre');
             $table->string('phone_no');
             $table->string('barcode_no')->unique();
+            $table->string('tac')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
